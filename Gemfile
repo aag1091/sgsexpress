@@ -43,3 +43,29 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-plus'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
+# test gems
+group :test do
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'launchy'
+  gem 'faker'
+  gem 'selenium-webdriver'
+  gem 'simplecov', require: false
+end
+
+gem 'devise'
+gem 'rails_admin'

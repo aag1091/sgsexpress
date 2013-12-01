@@ -1,7 +1,13 @@
 Sgsexpress::Application.routes.draw do
-  get "home/index"
+
+  get 'home/index'
+
+  root 'home#index'
+
   devise_for :users
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -42,7 +48,7 @@ Sgsexpress::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

@@ -18,10 +18,12 @@
     = javascript_include_tag "vendor/custom.modernizr"
     = csrf_meta_tags
   %body
-    .container
-      .columns.large-12.logo-header
-        .columns.large-4
-          = image_tag "sgs-logo.png", width: 300, height: 200
+    .row.header
+      .columns.large-12.logo-header.no_padding
+        .columns.large-2.no_padding
+          = image_tag "sgs-logo1.png", width: 300, height: 200
+        .columns.large-8.no_padding
+          = image_tag "sgs-logo2.png"
         .columns.large-2
           .contact_details
             %p
@@ -30,8 +32,10 @@
               9820076873
               %br
               022-65655658
-      .columns.large-12.menu
+      .columns.large-12.menu.no_padding
         = render 'shared/nav_bar'
-      .columns.large-12.main_content
+    .row.main_content
+      .columns.large-12{style: "height: 50px;"}
+      .columns.large-12
         = yield
     = javascript_include_tag "application"

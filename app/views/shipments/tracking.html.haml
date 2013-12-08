@@ -1,0 +1,30 @@
+.row
+  .columns.large-12
+    .columns.large-4.push-4
+      = simple_form_for @shipment do |f|
+        = f.input :tracking_id, label: false, placeholder: 'Enter Tracking Code'
+        = f.button :submit, 'Track', class: 'small button'
+
+.row
+  .columns.large-12
+    - if @retrieved_shipment
+      %table
+        %thead
+          %tr
+            %th Tracking Id
+            %th Booking Date
+            %th Source
+            %th Delivery Date
+            %th Destination
+            %th Remarks
+        %tbody
+          %tr
+            %td= @retrieved_shipment.tracking_id
+            %td= @retrieved_shipment.booking_date.strftime("%d/%m/%Y")
+            %td= "#{@retrieved_shipment.sender.locality}, #{@retrieved_shipment.sender.city}, #{@retrieved_shipment.sender.state}"
+            %td= @retrieved_shipment.delivery_date.strftime("%d/%m/%Y")
+            %td= "#{@retrieved_shipment.reciever.locality}, #{@retrieved_shipment.reciever.city}, #{@retrieved_shipment.reciever.state}"
+            %td= @retrieved_shipment.remark
+    - else
+      .columns.large-4.push-4{style: 'height: 50px;'}
+        No shipments Found

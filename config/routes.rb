@@ -8,6 +8,10 @@ Sgsexpress::Application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
+  get 'tracking' => 'shipments#tracking', as: :tracking
+
+  resources :shipments, only: [:create, :update]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

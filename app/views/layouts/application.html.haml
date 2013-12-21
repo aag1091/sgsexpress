@@ -20,22 +20,23 @@
   %body
     .row.header
       .columns.large-12.logo-header.no_padding
-        .columns.large-2.no_padding
-          = image_tag "sgs-logo1.png", width: 300, height: 200
-        .columns.large-8.no_padding
-          = image_tag "sgs-logo2.png"
-        .columns.large-2
-          .contact_details
-            %p
-              Contact No :
-              %br
-              9820076873
-              %br
-              022-65655658
+        .columns.large-3.no_padding
+          = image_tag "Logo.png"
+        .columns.large-9
       .columns.large-12.menu.no_padding
         = render 'shared/nav_bar'
     .row.main_content
-      .columns.large-12{style: "height: 50px;"}
+      .columns.large-12{style: "height: 20px;"}
       .columns.large-12
         = yield
+    .row.footer
+      .columns.large-12
+        .region.region-footer.clearfix
+          #block-block-1.clearfix.block.block-block
+            .content
+              %p Copyright © 2013 All rights reserved SGS Express.
+              %p
+                %span
+                  %a{href: "http://www.nexgenconcepts.in", target: "_blank"} Powered by nexgenconcepts
+    
     = javascript_include_tag "application"

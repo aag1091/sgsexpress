@@ -1,0 +1,15 @@
+.columns.large-4
+  .panel.columns.large-12
+    .columns.large-10.large-centered
+      = simple_form_for @shipment do |f|
+        = f.input :tracking_id, label: false, placeholder: 'Enter Tracking Code'
+        = f.button :submit, 'Track', class: 'small button centered'
+    
+  .panel.columns.large-12
+    .columns.large-10.large-centered
+      %h4
+        Contact No :-
+        %hr
+      
+      %h5.subheader
+        9820076873 / 022-65655658

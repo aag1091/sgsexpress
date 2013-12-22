@@ -19,10 +19,23 @@
     = csrf_meta_tags
   %body
     .row.header
-      .columns.large-12.logo-header.no_padding
-        .columns.large-3.no_padding
+      .columns.large-12.logo-header.no_padding{style: "height: 200px;"}
+        .columns.large-4.no_padding
           = image_tag "Logo.png"
-        .columns.large-9.no_padding
+        .columns.large-8.no_padding
+          %ul.example-orbit{"data-orbit" => "", style: "height: 200px;"}
+            %li
+              = image_tag "slides/slide1.jpg"
+              .orbit-caption Slide 1.
+            %li
+              = image_tag "slides/slide2.jpg"
+              .orbit-caption Slide 2.
+            %li
+              = image_tag "slides/slide3.jpg"
+              .orbit-caption Slide 3.
+            %li
+              = image_tag "slides/slide4.jpg"
+              .orbit-caption Slide 4.
       .columns.large-12.menu.no_padding
         = render 'shared/nav_bar'
     .row.main_content

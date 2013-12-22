@@ -31,5 +31,3 @@
                 %td= @retrieved_shipment.delivery_date.strftime("%d/%m/%Y")
                 %td= "#{@retrieved_shipment.reciever.locality}, #{@retrieved_shipment.reciever.city}, #{@retrieved_shipment.reciever.state}"
                 %td= @retrieved_shipment.remark
-        - unless @retrieved_shipment 
-          No shipments Found

@@ -29,7 +29,7 @@ body {
   }
 }
 
-.main_content {
+.main_content, .header, .footer {
   border-color: grey;
   border-style: solid;
   border-width: 1px;
@@ -46,9 +46,19 @@ body {
 }
 
 .example-orbit{
-  height: 200px;
+  height: 300px;
   img {
-    height: 200px;
+    height: 300px;
     width: 100%;
   }
+  .orbit-caption {
+    display: none;
+  }
+  .orbit-bullets, .orbit-timer, .orbit-prev, .orbit-slide-number, .orbit-prev {
+    display: none!important;
+  }
+}
+
+footer {
+  background: lightgrey;
 }

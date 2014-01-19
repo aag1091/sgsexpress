@@ -1,13 +1,25 @@
 body {
-  // background: asset-url('pink-gradient.png') no-repeat center center fixed !important;
-  -webkit-background-size: cover !important;
-  -moz-background-size: cover !important;
-  -o-background-size: cover !important;
-  background-size: cover !important;
+  background: #feffff; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #feffff 0%, #ddf1f9 35%, #a0d8ef 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#feffff), color-stop(35%,#ddf1f9), color-stop(100%,#a0d8ef)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-.container {
-  padding: 0 8%;
+.inner-background {
+  background: #f0f9ff; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #f0f9ff 0%, #cbebff 47%, #a1dbff 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f0f9ff), color-stop(47%,#cbebff), color-stop(100%,#a1dbff)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  // background-color: #DEF1FB;
 }
 
 .menu {
@@ -61,4 +73,11 @@ body {
 
 footer {
   background: lightgrey;
+}
+.footer .columns{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  p {
+    margin-bottom: 0px;
+  }
 }

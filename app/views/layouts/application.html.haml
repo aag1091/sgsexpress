@@ -18,13 +18,13 @@
     = javascript_include_tag "vendor/custom.modernizr"
     = csrf_meta_tags
   %body
-    .row.header
-      .columns.large-12.logo-header.no_padding{style: "height: 200px;"}
-        .columns.large-3.no_padding
+    .row.inner-background
+      .columns.large-12.logo-header.no_padding
+        .columns.large-3.no_padding.small-12
           = image_tag "sgs-logo1.png", width: 180
-        .columns.large-9.no_padding
+        .columns.large-9.no_padding.small-12
           = image_tag "sgs-logo2.png"
-      .columns.large-12.menu.no_padding
+      .columns.header.large-12.menu.no_padding
         = render 'shared/nav_bar'
     .row.header
       .columns.large-12.no_padding
@@ -42,15 +42,14 @@
             = image_tag "slides/slide4.jpg"
             .orbit-caption Slide 4.
     .row.main_content
-      .columns.large-12{style: "height: 20px;"}
-      .columns.large-12
+      .columns.large-12.inner-background{style: "height: 20px;"}
+      .columns.large-12.inner-background
         = yield
     %footer.row
-      .columns.large-12.content.no_padding.footer
-        .columns.large-6.large-centered
+      .columns.large-12.content.footer
+        .columns.large-6
           %p Copyright © 2013 All rights reserved SGS Express.
-        %br
-        .columns.large-3.right{ style: 'margin-top: -30px;' }
+        .columns.large-3.right
           %p
             %span
               %a{href: "http://www.nexgenconcepts.in", target: "_blank"} Powered by nexgenconcepts

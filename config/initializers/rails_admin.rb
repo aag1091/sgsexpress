@@ -26,7 +26,7 @@ RailsAdmin.config do |config|
   # config.default_items_per_page = 20
 
   # Exclude specific models (keep the others):
-  # config.excluded_models = []
+  config.excluded_models = [ Role, UserRole, User ]
 
   # Include specific models (exclude the others):
   # config.included_models = []

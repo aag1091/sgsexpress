@@ -26,8 +26,8 @@
             - if @retrieved_shipment
               %tr
                 %td= @retrieved_shipment.tracking_id
-                %td= @retrieved_shipment.booking_date.strftime("%d/%m/%Y")
-                %td= "#{@retrieved_shipment.sender.locality}, #{@retrieved_shipment.sender.city}, #{@retrieved_shipment.sender.state}"
-                %td= @retrieved_shipment.delivery_date.strftime("%d/%m/%Y")
-                %td= "#{@retrieved_shipment.reciever.locality}, #{@retrieved_shipment.reciever.city}, #{@retrieved_shipment.reciever.state}"
+                %td= date_display(@retrieved_shipment.booking_date)
+                %td= place_display(@retrieved_shipment.sender)
+                %td= date_display(@retrieved_shipment.delivery_date)
+                %td= place_display(@retrieved_shipment.reciever)
                 %td= @retrieved_shipment.remark

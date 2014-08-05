@@ -35,7 +35,7 @@ RailsAdmin.config do |config|
   # config.label_methods << :description # Default is [:name, :title]
 
   config.authorize_with do
-    redirect_to main_app.root_path unless warden.user.is_admin?
+    redirect_to main_app.root_path unless warden.user && warden.user.is_admin?
   end
 
   ################  Model configuration  ################
